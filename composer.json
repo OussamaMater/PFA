@@ -1,0 +1,22 @@
+{
+  "name": "vendor/pfa",
+  "description": "Composer's autoloader",
+  "authors": [
+    {
+      "name": "OussamaMater",
+      "email": "oussamamater@esen.tn"
+    },
+    {
+      "name": "MohamedTrabelsi",
+      "email": "mohamedtrabelsi@esen.tn"
+    }
+  ],
+  "autoload": {
+    "classmap": [
+      "app/Core",
+      "app/Controllers",
+      "app/Models",
+      "app/Utility"
+    ]
+  }
+}
