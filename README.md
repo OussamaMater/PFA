@@ -8,20 +8,20 @@ This is our year end project which implements object-oriented programming, PDO, 
 
 ## Requirements
 
-- PHP 7.x+
-- MySQL database
-- Composer
+-   PHP 7.x+
+-   MySQL database
+-   Composer
 
 ## Installation
 
-- Make sure you have Apache, MySQL, PHP installed.
-- Clone/Download this repository to a folder on your server.
-- Edit config.php with your own credentials.
+-   Make sure you have Apache, MySQL, PHP installed.
+-   Clone/Download this repository to a folder on your server.
+-   Edit config.php with your own credentials.
 
 ## Install Composer
 
-- Make sure composer installed.
-- In the project folder run the composer install command;
+-   Make sure composer installed.
+-   In the project folder run the composer install command;
 
 ```bash
     composer install
