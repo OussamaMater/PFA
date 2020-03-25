@@ -9,7 +9,7 @@ This is our year end project which implements object-oriented programming, PDO, 
 ## Authors
 
 -   Oussama Mater - *oussama.mater@esen.tn* - **[OussamaMater](https://github.com/OussamaMater)**
--   Mohamed Trabelsi - *mohamed.trabelsi@esen.tn - **[MohamedTrabelsi](https://github.com/moohameed)**
+-   Mohamed Trabelsi - *mohamed.trabelsi@esen.tn* - **[MohamedTrabelsi](https://github.com/moohameed)**
 
 ## Requirements
 
