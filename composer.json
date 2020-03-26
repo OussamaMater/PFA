@@ -16,7 +16,8 @@
       "www/app/Core",
       "www/app/Controllers",
       "www/app/Models",
-      "www/app/Utility"
+      "www/app/Utility",
+      "www/app/Views"
     ]
   }
 }
