@@ -35,7 +35,7 @@ class Controller
     {
         if (file_exists('../app/Views/' . $view . '.php')) {
             require_once '../app/Views/' . $view . '.php';
-            die();
+            exit();
         }
         echo("View does not exist");
     }
