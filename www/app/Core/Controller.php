@@ -20,8 +20,6 @@ class Controller
         require_once '../app/Models/' . $model . '.php';
         return new $model();
     }
-
-
     /**
      * model
      *
