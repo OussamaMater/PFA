@@ -20,7 +20,6 @@
 
 <body>
     <!-- ? navbar starts -->
-
     <nav class="navbar navbar-expand-md navbar-light bg-white sticky-top" id="navbar">
         <div class="container-fluid" id="containerF">
             <a class="navbar-brand"
@@ -62,5 +61,4 @@
             </div>
         </div>
     </nav>
-
     <!-- ? navbar ends -->

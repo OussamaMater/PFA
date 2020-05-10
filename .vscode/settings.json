@@ -1,0 +1,13 @@
+{
+    "sqltools.connections": [
+        {
+            "askForPassword": false,
+            "database": "PFA",
+            "dialect": "MySQL",
+            "name": "PFA",
+            "port": 3306,
+            "server": "localhost",
+            "username": "root"
+        }
+    ]
+}

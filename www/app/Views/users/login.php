@@ -4,6 +4,13 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-10 col-xl-9 mx-auto">
+            <div class="<?php echo (isset($_SESSION['register'])) ? "alert alert-success" : "" ?>"
+                role=" alert">
+                <?php  if (isset($_SESSION['register'])) : ?>
+                <?php echo $_SESSION['register'] ?>
+                <?php else : ?>
+                <?php endif ?>
+            </div>
             <div class="card card-login flex-row my-5">
                 <div class="card-img-left d-none d-md-flex">
                 </div>

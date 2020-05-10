@@ -177,6 +177,12 @@ h2 {
   background-size: cover;
 }
 
+.card-profile .card-img-left {
+  width: 45%;
+  background: scroll center url("https://images.unsplash.com/photo-1510797492219-e110e2a935a4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExMDk0fQ&auto=format&fit=crop&w=634&q=80");
+  background-size: cover;
+}
+
 .card-signin .card-body {
   padding: 2rem;
 }
