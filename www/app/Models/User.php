@@ -7,23 +7,23 @@
  */
 class User
 {
-    private $db;
+    private $dbm;
     public function __construct()
     {
-        $this->db = new Database;
+        $this->dbm = new Database;
     }
     // SignUp function
     public function signup($data)
     {
-        $this->db->query("INSERT INTO users (idUser, userFName, userLName, userEmail, userAddress, userPassword, userPhone) VALUES (:userID, :firstname, :lastname, :email, :useraddress, :userpassword, :userphone)");
-        $this->db->bind(':userID', rand(1, 1000));
-        $this->db->bind(':firstname', $data['firstname']);
-        $this->db->bind(':lastname', $data['lastname']);
-        $this->db->bind(':email', $data['email']);
-        $this->db->bind(':useraddress', $data['address']);
-        $this->db->bind(':userpassword', $data['password']);
-        $this->db->bind(':userphone', $data['phone']);
-        if ($this->db->execute()) {
+        $this->dbm->query("INSERT INTO users (idUser, userFName, userLName, userEmail, userAddress, userPassword, userPhone) VALUES (:userID, :firstname, :lastname, :email, :useraddress, :userpassword, :userphone)");
+        $this->dbm->bind(':userID', rand(1, 1000));
+        $this->dbm->bind(':firstname', $data['firstname']);
+        $this->dbm->bind(':lastname', $data['lastname']);
+        $this->dbm->bind(':email', $data['email']);
+        $this->dbm->bind(':useraddress', $data['address']);
+        $this->dbm->bind(':userpassword', $data['password']);
+        $this->dbm->bind(':userphone', $data['phone']);
+        if ($this->dbm->execute()) {
             return true;
         }
         return false;
@@ -31,9 +31,9 @@ class User
     // Login user
     public function login($email, $password)
     {
-        $this->db->query('SELECT * FROM users WHERE userEmail = :email');
-        $this->db->bind(':email', $email);
-        $row = $this->db->single();
+        $this->dbm->query('SELECT * FROM users WHERE userEmail = :email');
+        $this->dbm->bind(':email', $email);
+        $row = $this->dbm->single();
         $hashed_password = $row->userPassword;
         if (password_verify($password, $hashed_password)) {
             return $row;
@@ -43,15 +43,15 @@ class User
     // Update user's profile
     public function updateProfile($data)
     {
-        $this->db->query('UPDATE users SET userFName=:firstname, userLNAME=:lastname, userEmail=:email, userAddress=:useraddress, userPassword=:userpassword, userPhone=:userphone WHERE idUser=:userID');
-        $this->db->bind(':userID', $_SESSION['user_id']);
-        $this->db->bind(':firstname', $data['firstname']);
-        $this->db->bind(':lastname', $data['lastname']);
-        $this->db->bind(':email', $data['email']);
-        $this->db->bind(':useraddress', $data['address']);
-        $this->db->bind(':userpassword', $data['password']);
-        $this->db->bind(':userphone', $data['phone']);
-        if ($this->db->execute()) {
+        $this->dbm->query('UPDATE users SET userFName=:firstname, userLNAME=:lastname, userEmail=:email, userAddress=:useraddress, userPassword=:userpassword, userPhone=:userphone WHERE idUser=:userID');
+        $this->dbm->bind(':userID', $_SESSION['user_id']);
+        $this->dbm->bind(':firstname', $data['firstname']);
+        $this->dbm->bind(':lastname', $data['lastname']);
+        $this->dbm->bind(':email', $data['email']);
+        $this->dbm->bind(':useraddress', $data['address']);
+        $this->dbm->bind(':userpassword', $data['password']);
+        $this->dbm->bind(':userphone', $data['phone']);
+        if ($this->dbm->execute()) {
             $_SESSION['user_email']=$data['email'];
             return true;
         }
@@ -60,9 +60,9 @@ class User
     // Deletes user's profile
     public function deleteAccount()
     {
-        $this->db->query('DELETE FROM users WHERE idUser=:userId');
-        $this->db->bind(':userId', $_SESSION['user_id']);
-        if ($this->db->execute()) {
+        $this->dbm->query('DELETE FROM users WHERE idUser=:userId');
+        $this->dbm->bind(':userId', $_SESSION['user_id']);
+        if ($this->dbm->execute()) {
             return true;
         }
         return false;
@@ -70,11 +70,11 @@ class User
     // Find user by email
     public function findUserByEmail($email)
     {
-        $this->db->query('SELECT * FROM users WHERE userEmail = :email');
-        $this->db->bind(':email', $email);
-        $this->db->single();
+        $this->dbm->query('SELECT * FROM users WHERE userEmail = :email');
+        $this->dbm->bind(':email', $email);
+        $this->dbm->single();
         // Check row
-        if ($this->db->rowCount() > 0) {
+        if ($this->dbm->rowCount() > 0) {
             return true;
         }
         return false;
@@ -82,11 +82,11 @@ class User
     // Find user by phone in case needed
     public function findUserByPhone($phone)
     {
-        $this->db->query('SELECT * FROM users WHERE userPhone = :userphone');
-        $this->db->bind(':email', $phone);
-        $this->db->single();
+        $this->dbm->query('SELECT * FROM users WHERE userPhone = :userphone');
+        $this->dbm->bind(':email', $phone);
+        $this->dbm->single();
         // Check row
-        if ($this->db->rowCount() > 0) {
+        if ($this->dbm->rowCount() > 0) {
             return true;
         }
         return false;
@@ -94,9 +94,9 @@ class User
     // Return a user row
     public function returnUser($email)
     {
-        $this->db->query('SELECT * FROM users WHERE userEmail = :email');
-        $this->db->bind(':email', $email);
-        $row = $this->db->single();
+        $this->dbm->query('SELECT * FROM users WHERE userEmail = :email');
+        $this->dbm->bind(':email', $email);
+        $row = $this->dbm->single();
         return $row;
     }
 }

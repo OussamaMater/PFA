@@ -1,3 +1,5 @@
+/* ? Custom 404 Page starts */
+
 .container {
   min-height: 60vh;
   display: -ms-flexbox;
@@ -48,6 +50,7 @@
     -webkit-transform: translate(100px);
   }
 }
+
 @-moz-keyframes wood-stump {
   0% {
     -moz-transform: translate(100px);
@@ -80,10 +83,10 @@
     transform: translate(100px);
   }
   50% {
-    -webkit-transform: translate(0px);
-    -moz-transform: translate(0px);
-    -ms-transform: translate(0px);
-    transform: translate(0px);
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -ms-transform: translate(0);
+    transform: translate(0);
   }
   100% {
     -webkit-transform: translate(100px);
@@ -144,12 +147,14 @@
     -ms-transform: translate(0, 70px);
     transform: translate(0, 70px);
   }
+
   50% {
     -webkit-transform: translate(0);
     -moz-transform: translate(0);
     -ms-transform: translate(0);
     transform: translate(0);
   }
+
   100% {
     -webkit-transform: translate(0, 70px);
     -moz-transform: translate(0, 70px);
@@ -169,3 +174,5 @@
 #notFound {
   fill: #a7444b;
 }
+
+/* ? Custom 404 Page ends */
