@@ -145,7 +145,7 @@
     transform: translate(0, 70px);
   }
   50% {
-    -webkit-transform: translate(0p);
+    -webkit-transform: translate(0);
     -moz-transform: translate(0);
     -ms-transform: translate(0);
     transform: translate(0);
