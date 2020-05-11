@@ -56,6 +56,6 @@ class Core
         }
         // Redirect to the default controller
         redirect('pages/index');
-        die();
+        exit;
     }
 }

@@ -4,10 +4,10 @@
  * Controller
  *
  * Users Controller
+ // GIFLENS-https://media0.giphy.com/media/2WxWfiavndgcM/200.gif
  */
 class Users extends Controller
 {
-    private $db;
     public function __construct()
     {
         $this->userModel = $this->model('User');
@@ -147,9 +147,9 @@ class Users extends Controller
             }
         } else {
             $data = [
-                'email' => '',
-                'password' => '',
-                'email_err' => '',
+                'email'        => '',
+                'password'     => '',
+                'email_err'    => '',
                 'password_err' => '',
             ];
             $this->view('users/login', $data);

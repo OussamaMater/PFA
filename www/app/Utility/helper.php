@@ -4,7 +4,10 @@ session_start();
 // Redirect function
     function redirect($page)
     {
-        header('location: ' . URLROOT . $page);
+        if (!headers_sent()) {
+            header('location: ' . URLROOT . $page);
+            exit;
+        }
     }
 // Test if the user is logged in
     function isLoggedIn()

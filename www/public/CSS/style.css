@@ -1,20 +1,11 @@
-/*  ? ######################################################################################################################################################################################### */
-/* NOTES: */
-/* * Editor used : VScode. */
-/* * Extensions Used : BetterComments, RainbowIndent, Waka, GitLens, Prettier. */
-/* * File Path : WebProject/CSS/ .*/
-/* * File Description : StyleSheet. */
-/* * TrackingSys : Git, @ oussama.mater@esen.tn, mohamed.trabelsi@esen.tn, MasterBranche */
-/* ? #########################################################################################################################################################################################*/
-
-/* ? FontLink starts*/
+/* ? FontLink starts */
 
 @import url("https://fonts.googleapis.com/css?family=Armata&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Calistoga&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Boogaloo&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Anton&display=swap");
 
-/* ? FontLink ends*/
+/* ? FontLink ends */
 
 /* ! CssCode starts */
 
@@ -61,18 +52,6 @@ h2 {
   color: white !important;
 }
 
-.navscroll #navcustom_1:hover {
-  color: #b82be2 !important;
-}
-
-.navscroll #navcustom_2:hover {
-  color: #e25822 !important;
-}
-
-.navscroll #navcustom_3:hover {
-  color: #2e8b57 !important;
-}
-
 #navcustom_1:hover {
   border-bottom: 4px solid #40d9ac;
   color: #b82be2;
@@ -92,16 +71,28 @@ h2 {
   border-bottom: 4px solid #40d9ac;
 }
 
-#navcustom_5:hover,
-#navcustom_6:hover {
-  background-color: #40d9ac;
-  color: white;
-}
-
 #navcustom_5,
 #navcustom_6 {
   border: 2px solid #40d9ac;
   color: #40d9ac;
+}
+
+.navscroll #navcustom_1:hover {
+  color: #b82be2 !important;
+}
+
+.navscroll #navcustom_2:hover {
+  color: #e25822 !important;
+}
+
+.navscroll #navcustom_3:hover {
+  color: #2e8b57 !important;
+}
+
+#navcustom_5:hover,
+#navcustom_6:hover {
+  background-color: #40d9ac;
+  color: white;
 }
 
 #navbar #containerF #navbarResponsive #navbarAuto .nav-item {
@@ -140,7 +131,7 @@ h2 {
 }
 
 .fa-youtube {
-  color: #bb0000;
+  color: #b00;
 }
 
 .fa-facebook:hover,
@@ -150,6 +141,83 @@ h2 {
 }
 
 /* ? SocialMediaCustom ends */
+
+/* ? NearMeCards starts */
+
+.card-body {
+  text-align: center;
+}
+
+.card-body a {
+  color: black;
+  font-family: "Boogaloo", cursive;
+  font-size: xx-large;
+}
+
+#card_1:hover {
+  color: #ff5757;
+  text-decoration: none;
+  border-bottom: 2px solid #ff5757;
+  border-top: 2px solid #ff5757;
+}
+
+#card_2:hover {
+  color: #38b6ff;
+  text-decoration: none;
+  border-left: 2px solid #38b6ff;
+  border-right: 2px solid #38b6ff;
+}
+
+#card_3:hover {
+  color: #8c52ff;
+  text-decoration: none;
+  border-bottom: 2px solid #8c52ff;
+  border-top: 2px solid #8c52ff;
+}
+
+#card_4:hover {
+  color: #c9e265;
+  text-decoration: none;
+  border-left: 2px solid #c9e265;
+  border-right: 2px solid #c9e265;
+}
+
+#card_5:hover {
+  color: #ffbd59;
+  text-decoration: none;
+  border-bottom: 2px solid #ffbd59;
+  border-top: 2px solid #ffbd59;
+}
+
+#card_6:hover {
+  color: #ff914d;
+  text-decoration: none;
+  border-left: 2px solid #ff914d;
+  border-right: 2px solid #ff914d;
+}
+
+#card_7:hover {
+  color: #7ed957;
+  text-decoration: none;
+  border-bottom: 2px solid #7ed957;
+  border-top: 2px solid #7ed957;
+}
+
+#card_8:hover {
+  color: #ffde59;
+  text-decoration: none;
+  border-left: 2px solid #ffde59;
+  border-right: 2px solid #ffde59;
+}
+
+#card_9:hover {
+  color: #8c52ff;
+  text-decoration: none;
+  border-bottom: 2px solid #8c52ff;
+  border-top: 2px solid #8c52ff;
+}
+
+/* ? NearMeCards ends */
 
 /* ? SignUp-LogIn starts */
 
@@ -284,83 +352,6 @@ h2 {
 }
 
 /* ?SignUP-LogIn ends */
-
-/* ? NearMeCards starts */
-
-.card-body {
-  text-align: center;
-}
-
-.card-body a {
-  color: black;
-  font-family: "Boogaloo", cursive;
-  font-size: xx-large;
-}
-
-#card_1:hover {
-  color: #ff5757;
-  text-decoration: none;
-  border-bottom: 2px solid #ff5757;
-  border-top: 2px solid #ff5757;
-}
-
-#card_2:hover {
-  color: #38b6ff;
-  text-decoration: none;
-  border-left: 2px solid #38b6ff;
-  border-right: 2px solid #38b6ff;
-}
-
-#card_3:hover {
-  color: #8c52ff;
-  text-decoration: none;
-  border-bottom: 2px solid #8c52ff;
-  border-top: 2px solid #8c52ff;
-}
-
-#card_4:hover {
-  color: #c9e265;
-  text-decoration: none;
-  border-left: 2px solid #c9e265;
-  border-right: 2px solid #c9e265;
-}
-
-#card_5:hover {
-  color: #ffbd59;
-  text-decoration: none;
-  border-bottom: 2px solid #ffbd59;
-  border-top: 2px solid #ffbd59;
-}
-
-#card_6:hover {
-  color: #ff914d;
-  text-decoration: none;
-  border-left: 2px solid #ff914d;
-  border-right: 2px solid #ff914d;
-}
-
-#card_7:hover {
-  color: #7ed957;
-  text-decoration: none;
-  border-bottom: 2px solid #7ed957;
-  border-top: 2px solid #7ed957;
-}
-
-#card_8:hover {
-  color: #ffde59;
-  text-decoration: none;
-  border-left: 2px solid #ffde59;
-  border-right: 2px solid #ffde59;
-}
-
-#card_9:hover {
-  color: #8c52ff;
-  text-decoration: none;
-  border-bottom: 2px solid #8c52ff;
-  border-top: 2px solid #8c52ff;
-}
-
-/* ? NearMeCards ends */
 
 /* ? SearchBar starts */
 

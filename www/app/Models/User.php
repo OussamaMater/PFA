@@ -8,7 +8,6 @@
 class User
 {
     private $db;
-
     public function __construct()
     {
         $this->db = new Database;
@@ -26,9 +25,8 @@ class User
         $this->db->bind(':userphone', $data['phone']);
         if ($this->db->execute()) {
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
     // Login user
     public function login($email, $password)
@@ -39,9 +37,8 @@ class User
         $hashed_password = $row->userPassword;
         if (password_verify($password, $hashed_password)) {
             return $row;
-        } else {
-            return false;
         }
+        return false;
     }
     // Update user's profile
     public function updateProfile($data)
@@ -57,9 +54,8 @@ class User
         if ($this->db->execute()) {
             $_SESSION['user_email']=$data['email'];
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
     // Deletes user's profile
     public function deleteAccount()
@@ -76,26 +72,24 @@ class User
     {
         $this->db->query('SELECT * FROM users WHERE userEmail = :email');
         $this->db->bind(':email', $email);
-        $row = $this->db->single();
+        $this->db->single();
         // Check row
         if ($this->db->rowCount() > 0) {
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
     // Find user by phone in case needed
     public function findUserByPhone($phone)
     {
         $this->db->query('SELECT * FROM users WHERE userPhone = :userphone');
         $this->db->bind(':email', $phone);
-        $row = $this->db->single();
+        $this->db->single();
         // Check row
         if ($this->db->rowCount() > 0) {
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
     // Return a user row
     public function returnUser($email)
