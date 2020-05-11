@@ -43,9 +43,11 @@
   0% {
     -webkit-transform: translate(100px);
   }
+
   50% {
     -webkit-transform: translate(50px);
   }
+
   100% {
     -webkit-transform: translate(100px);
   }
