@@ -18,7 +18,8 @@ session_start();
         return false;
     }
     // Custom flash message
-    function flash($name, $message)
+    function flash($name, $message, $class='')
     {
         $_SESSION[$name]=$message;
+        $_SESSION['class']=$class;
     }

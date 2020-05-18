@@ -112,6 +112,12 @@ class Database
         $this->execute();
         return $this->stmt->fetchAll();
     }
+    // Get result set as associative array
+    public function resultSetAssoc()
+    {
+        $this->execute();
+        return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
     // Get a signle row
     public function single()
     {

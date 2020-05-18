@@ -10,6 +10,7 @@
 </script>
 <!-- ? JSLink -->
 <script src="../JS/functions.js"></script>
+<!-- ! footer starts -->
 <footer>
     <div class="container-fluid padding">
         <div class="row text-center">
@@ -18,9 +19,7 @@
             </div>
         </div>
     </div>
-    </div>
 </footer>
-
 <!-- ! footer ends-->
 </body>
 

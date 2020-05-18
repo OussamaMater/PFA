@@ -33,14 +33,14 @@
                 <ul class="navbar-nav ml-auto" id="navbarAuto">
                     <li class="nav-item"><a
                             href="<?php echo URLROOT;?>pages/index"
-                            class="nav-link" id="navcustom_1"><i class="fas fa-campground"></i>Home</a>
+                            class="nav-link" id="navcustom_1"><i class="fas fa-campground"></i> Home</a>
                     </li>
                     <li class="nav-item"><a
-                            href="<?php echo URLROOT;?>locations/nearme"
-                            class="nav-link" id="navcustom_2"><i class="fas fa-fire"></i>Near Me</a></li>
+                            href="<?php echo URLROOT;?>camps/stories"
+                            class="nav-link" id="navcustom_2"><i class="fas fa-fire"></i> Stories</a></li>
                     <li class="nav-item"><a
                             href="<?php echo URLROOT;?>pages/about"
-                            class="nav-link" id="navcustom_3"><i class="fas fa-tree"></i>About</a></li>
+                            class="nav-link" id="navcustom_3"><i class="fas fa-tree"></i> About</a></li>
                     <?php if (isLoggedIn()) : ?>
                     <li class="nav-item"><a
                             href="<?php echo URLROOT;?>users/profile"

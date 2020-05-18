@@ -49,7 +49,7 @@ class Core
     public function getUrl()
     {
         if (filter_has_var(INPUT_GET, 'url')) {
-            $url = rtrim($_GET['url'], '/');
+            $url = rtrim(filter_input(INPUT_GET, 'url'), '/');
             $url = filter_var($url, FILTER_SANITIZE_URL);
             $url = explode('/', $url);
             return $url;

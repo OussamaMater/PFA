@@ -8,15 +8,23 @@
 class User
 {
     private $dbm;
+    private $dbmr;
     public function __construct()
     {
-        $this->dbm = new Database;
+        $this->dbm  = new Database;
     }
     // SignUp function
     public function signup($data)
     {
-        $this->dbm->query("INSERT INTO users (idUser, userFName, userLName, userEmail, userAddress, userPassword, userPhone) VALUES (:userID, :firstname, :lastname, :email, :useraddress, :userpassword, :userphone)");
-        $this->dbm->bind(':userID', rand(1, 1000));
+        $this->dbm->query('INSERT INTO users (idUser, userFName, userLName, userEmail, userAddress, userPassword, userPhone) VALUES (:userID, :firstname, :lastname, :email, :useraddress, :userpassword, :userphone)');
+        $allId = $this->returnId();
+        $value = rand(1, 1000);
+        if ($allId != null) {
+            while (in_array($value, $allId)) {
+                $value = rand(1, 1000);
+            }
+        }
+        $this->dbm->bind(':userID', $value);
         $this->dbm->bind(':firstname', $data['firstname']);
         $this->dbm->bind(':lastname', $data['lastname']);
         $this->dbm->bind(':email', $data['email']);
@@ -98,5 +106,21 @@ class User
         $this->dbm->bind(':email', $email);
         $row = $this->dbm->single();
         return $row;
+    }
+    // Return all the ids
+    public function returnId()
+    {
+        $this->dbmr = new Database;
+        $this->dbmr->query('SELECT idUser FROM users');
+        if ($this->dbmr->rowCount()==0) {
+            return null;
+        }
+        $row=$this->dbmr->resultSetAssoc();
+        foreach ($row as $row_1 => $value_1) {
+            foreach ($value_1 as $row_2=>$value_2) {
+                $allId[] =  $value_2;
+            }
+        }
+        return $allId;
     }
 }
