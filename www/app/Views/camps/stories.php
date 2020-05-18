@@ -113,7 +113,7 @@
                 <?php echo $story->userName; ?>
                 <?php if (!isLoggedIn() || $_SESSION['user_id'] != $story->Writer) : ?>
                 <button
-                    href="<?php echo (!isLoggedIn()) ?  ''.URLROOT.'users/login' : '#showDetails' ;?>"
+                    href="<?php echo (!isLoggedIn()) ?  ''.URLROOT.'users/login' : '##' ;?>"
                     style="border-radius: 0;" class="btn btn-outline-success float-right" data-toggle="modal"><i
                         class="fas fa-info"></i></button>
                 <?php endif ?>

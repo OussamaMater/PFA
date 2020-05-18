@@ -27,12 +27,13 @@ class Camps extends Controller
                 'story' => $stories
             ];
             if ((filter_input(INPUT_SERVER, 'REQUEST_METHOD') == 'POST') && (filter_has_var(INPUT_POST, 'action'))) {
-                if ($this->storiesModel->deleteStory($_POST['action'])) {
+                if ($this->storiesModel->deleteStory(filter_input(INPUT_POST, 'action'))) {
                     flash('add_post', "We're sorry to see you deleting your stories", 'info');
                     redirect('camps/stories');
                     return;
                 }
             } elseif ((filter_input(INPUT_SERVER, 'REQUEST_METHOD') == 'POST') && (filter_input(INPUT_POST, 'addstory')=='addPost')) {
+                $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
                 $addData = [
                     'writer'          => $_SESSION['user_id'],
                     'name'            => trim(filter_input(INPUT_POST, 'storyName')),

@@ -116,8 +116,8 @@ class User
             return null;
         }
         $row=$this->dbmr->resultSetAssoc();
-        foreach ($row as $row_1 => $value_1) {
-            foreach ($value_1 as $row_2=>$value_2) {
+        foreach ($row as $value_1) {
+            foreach ($value_1 as $value_2) {
                 $allId[] =  $value_2;
             }
         }
