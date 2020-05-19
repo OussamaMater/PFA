@@ -9,7 +9,7 @@
 .admin-form {
   position: relative;
   z-index: 1;
-  background: #ffffff;
+  background: #fff;
   max-width: 360px;
   margin: 0 auto 100px;
   padding: 45px;
@@ -37,7 +37,7 @@
   width: 100%;
   border: 0;
   padding: 15px;
-  color: #ffffff;
+  color: #fff;
   font-size: 14px;
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
