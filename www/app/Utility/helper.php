@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-// Redirect function
+    // Redirects users to a given page
     function redirect($page)
     {
         if (!headers_sent()) {
@@ -9,7 +9,7 @@ session_start();
             exit;
         }
     }
-// Test if the user is logged in
+    // Tests if the user is logged in
     function isLoggedIn()
     {
         if (isset($_SESSION['user_id'])) {

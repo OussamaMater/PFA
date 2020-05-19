@@ -14,6 +14,7 @@
                 <div class="carousel-caption">
                     <h1>WildCampers</h1>
                     <h3>In The Wild We Camp, Join Us.</h3>
+                    <?php if (!isLoggedIn() && !Session::exists('admin')) : ?>
                     <a class="btn btn-outline-light btn-lg"
                         href="<?php echo URLROOT;?>users/login"
                         role="button" style="border-radius: 0px;">Log In</a>
@@ -21,6 +22,7 @@
                         href="<?php echo URLROOT;?>users/signup"
                         role="button" style="border-radius: 0px;">Sign
                         Up</a>
+                    <?php endif?>
                 </div>
             </div>
             <div class="carousel-item">

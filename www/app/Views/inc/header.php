@@ -41,7 +41,14 @@
                     <li class="nav-item"><a
                             href="<?php echo URLROOT;?>pages/about"
                             class="nav-link" id="navcustom_3"><i class="fas fa-tree"></i> About</a></li>
-                    <?php if (isLoggedIn()) : ?>
+                    <?php if (Session::exists('admin')) : ?>
+                    <li class="nav-item"><a
+                            href="<?php echo URLROOT;?>admins/stats"
+                            class="nav-link" id="navcustom_4">Stats</a></li>
+                    <li class="nav-item"><a
+                            href="<?php echo URLROOT;?>admins/logout"
+                            class="nav-link" id="navcustom_6">Log Out</a></li>
+                    <?php elseif (isLoggedIn()) : ?>
                     <li class="nav-item"><a
                             href="<?php echo URLROOT;?>users/profile"
                             class="nav-link" id="navcustom_4">Profile</a></li>

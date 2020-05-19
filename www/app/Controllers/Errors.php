@@ -17,6 +17,6 @@ class Errors extends Controller
     }
     public function forbidden()
     {
-        $this->view('pages/forbidden');
+        $this->view('errors/forbidden');
     }
 }

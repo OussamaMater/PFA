@@ -6,6 +6,7 @@
 @import url("https://fonts.googleapis.com/css?family=Anton&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bad+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
 
 /* ? FontLink ends */
 
@@ -466,14 +467,15 @@ footer {
 /* ? NoPosts text starts */
 
 .noPosts {
-  font-size: 50px;
+  font-size: 70px;
 }
 
 #nopost {
   display: inline-block;
   font-weight: bolder;
+  font-family: "Bungee", cursive;
   animation: mover 1.5s linear infinite;
-  color: #3f3f3f;
+  color: rgba(0, 255, 136, 0.3);
 }
 
 #nopost:nth-child(1) {
@@ -540,6 +542,49 @@ footer {
 }
 
 /* ? NoPosts text ends */
+
+/* ? Access forbidden starts */
+
+.forbidden {
+  font-size: 100px;
+}
+
+#forbiddenc {
+  display: inline-block;
+  font-weight: bolder;
+  font-family: "Bungee", cursive;
+  animation: moverf 1.5s linear infinite;
+  color: rgba(0, 255, 136, 0.3);
+}
+
+#forbiddenc:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+#forbiddenc:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+#forbiddenc:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes moverf {
+  0% {
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0);
+  }
+
+  50% {
+    text-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
+    transform: translateY(35px);
+  }
+
+  100% {
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0);
+  }
+}
+
+/* ? Access forbidden ends */
 
 /* ! CssCode ends */
 
