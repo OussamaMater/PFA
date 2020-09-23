@@ -29,5 +29,5 @@ This is our year end project which implements object-oriented programming, PDO, 
 -   In the project folder run the composer install command;
 
 ```bash
-    composer install
+    $ composer install
 ```
